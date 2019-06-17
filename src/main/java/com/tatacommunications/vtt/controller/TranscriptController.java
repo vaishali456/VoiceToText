@@ -1,6 +1,7 @@
 package com.tatacommunications.vtt.controller;
 
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -83,8 +84,15 @@ public class TranscriptController {
 	        }
 	        fis.close();
 	        bis.close();
+	        
+	        
 	        try {
-	        	 FileInputStream new1=new FileInputStream(file);
+	        	 File new1=new File(file);
+	        	 if(new1!=null) {
+	        		 System.out.println(new1.getAbsolutePath());
+	        	 }
+	        	
+	        	 
 	        }catch(Exception e) {
 	        	System.out.println("File Not Found");
 	        	e.printStackTrace();
