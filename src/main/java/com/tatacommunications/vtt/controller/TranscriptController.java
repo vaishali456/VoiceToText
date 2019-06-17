@@ -47,5 +47,13 @@ public class TranscriptController {
 		RestResponse response=new RestResponse(transcriptDao.getAllTranscriptDetails(),200,"Success");
 		return new Gson().toJson(response);
 	}
+    
+    
+    @CrossOrigin(origins = "*")
+   	@RequestMapping(value = "/get", method = RequestMethod.GET)
+   	public String get() {
+   		return new Gson().toJson("Helooo");
+   	}
+
 
 }
