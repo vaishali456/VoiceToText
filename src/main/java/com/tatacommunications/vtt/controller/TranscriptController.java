@@ -52,6 +52,7 @@ public class TranscriptController {
     @CrossOrigin(origins = "*")
    	@RequestMapping(value = "/get", method = RequestMethod.GET)
    	public String get() {
+    	System.out.println("Helooooo");
    		return new Gson().toJson("Helooo");
    	}
 
